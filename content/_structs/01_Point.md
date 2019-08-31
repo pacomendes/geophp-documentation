@@ -6,9 +6,9 @@ Represents a single point in 2D space.
 
 # Methods
 
-## new(float $x, float $y): Point
+## **new(float $x, float $y): Point**
 
-Creates a new Point
+Creates a new Point.
 
 ```
 use JWare\GeoPHP\Point;
@@ -17,9 +17,9 @@ $point = new Point(3, 28);
 $point2 = new Point($x=12.3, $y=-9.21);
 ```
 
-## clone(): Point
+## **clone(): Point**
 
-Creates a Point's clone
+Creates a Point's clone.
 
 ```
 $point = new Point(3, 28);
@@ -27,16 +27,16 @@ $point2 = $point->clone();
 $point2->isEqual($point); // True
 ```
 
-## getX(): float
+## **getX(): float**
 
-X coordinate getter
+X coordinate getter.
 
 ```
 $point = new Point(3, 28);
 $point->getX(); // 3
 ```
 
-## setX(float $x): Point
+## **setX(float $x): Point**
 
 X coordinate setter. Returns the instance for chainable behaviour.
 
@@ -45,16 +45,16 @@ $point = new Point(3, 28);
 $point->setX(33)->getX(); // 33
 ```
 
-## getY(): float
+## **getY(): float**
 
-Y coordinate getter
+Y coordinate getter.
 
 ```
 $point = new Point(3, 28);
 $point->getY(); // 28
 ```
 
-## setY(float $y): Point
+## **setY(float $y): Point**
 
 Y coordinate setter. Returns the instance for chainable behaviour.
 
@@ -63,7 +63,7 @@ $point = new Point(3, 28);
 $point->setY(42)->getY(); // 42
 ```
 
-## getXandY(): array
+## **getXandY(): array**
 
 X and Y coordinates getter.
 
@@ -72,7 +72,7 @@ $point = new Point(3, 28);
 $point->getXandY(); // [3, 28]
 ```
 
-## isEqual(Point $otherPoint): bool
+## **isEqual(Point $otherPoint): bool**
 
 Checks if two point have the same coordinates.
 
@@ -85,7 +85,7 @@ $point->isEqual($point2); // True
 $point->isEqual($point3); // False
 ```
 
-## getMagnitude(): float
+## **getMagnitude(): float**
 
 Computes the magnitude of the point's vector.
 
@@ -94,7 +94,7 @@ $point = new Point(1, 2);
 $point->getMagnitude(); // 2.236067977
 ```
 
-## fromRadiansToDegrees(): Point
+## **fromRadiansToDegrees(): Point**
 
 Converts x and y components of the Point from radians to degrees. Returns a Point with the new components.
 
@@ -104,7 +104,7 @@ $pointConverted = $point->fromRadiansToDegrees();
 $pointConverted->getXAndY(); // [114.5916, 171.8873]
 ```
 
-## fromDegreesToRadians(): Point
+## **fromDegreesToRadians(): Point**
 
 Converts x and y components of the Point from degrees to radians. Returns a Point with the new components.
 
@@ -114,7 +114,7 @@ $pointConverted = $point->fromDegreesToRadians();
 $pointConverted->getXAndY(); // [1, 0]
 ```
 
-## getAngle(Point $otherPoint, bool $inDegrees = true): float
+## **getAngle(Point $otherPoint, bool $inDegrees = true): float**
 
 Computes the angle between two points. If `$inDegrees` is true the result is returned in degrees, in radians otherwise.
 
@@ -124,7 +124,7 @@ $point2 = new Point(2, 2);
 $point1->getAngle($point2); // 45
 ```
 
-## dotProduct(Point $otherPoint): float
+## **dotProduct(Point $otherPoint): float**
 
 Computes the dot product of the two points: dot = x1 * x2 + y1 * y2.
 
@@ -134,7 +134,7 @@ $point2 = new Point(1.5, 0.5);
 $point1->dotProduct($point2); // 5.25s
 ```
 
-## crossProduct(Point $point2, Point $point3): float
+## **crossProduct(Point $point2, Point $point3): float**
 
 Computes the cross product of the three points. A positive value implies $this → #point2 → $point3 is counter-clockwise, negative implies clockwise.
 
@@ -145,7 +145,7 @@ $pointC = new Point(7, 12);
 $pointA->crossProduct($pointB, $pointC); // 2
 ```
 
-## euclideanDistance(Point $otherPoint): float
+## **euclideanDistance(Point $otherPoint): float**
 
 Computes the euclidean distance between two points.
 
@@ -155,7 +155,7 @@ $point2 = new Point(4, 5)
 $point->euclideanDistance($point2); // 4.243
 ```
 
-## intersectsLine(Line $line): bool
+## **intersectsLine(Line $line): bool**
 
 Checks whether the point intersects a line.
 
@@ -170,7 +170,7 @@ $point->intersectsLine($line) // True
 $point2->intersectsLine($line) // False
 ```
 
-## intersectsPoint(Point $otherPoint): bool
+## **intersectsPoint(Point $otherPoint): bool**
 
 Checks whether the point intersects with another point. Two points intersect if they have the same X and Y coordinates (same as `isEqual` method).
 
@@ -182,7 +182,7 @@ $point->intersectsPoint($point2) // False
 $point2->intersectsPoint($point3) // True
 ```
 
-## intersectsPolygon(Polygon $polygon): bool
+## **intersectsPolygon(Polygon $polygon): bool**
 
 Checks whether the point intersects with a polygon.
 
