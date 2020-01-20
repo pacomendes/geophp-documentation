@@ -124,7 +124,7 @@ $points = $line->getPoints(); // [Point(2, 34), Point(2, 11)]
 $points[0]->isEquals($points[1]); // False
 ```
 
-## **intersectsPoint(Point $aPoint): bool**
+## **intersectsPoint(Point $point): bool**
 
 Checks whether the line intersects a point.
 
@@ -139,7 +139,7 @@ $line->intersectsPoint($point1); // True
 $line->intersectsPoint($point2); // False
 ```
 
-## **intersectsLine(Line $aLine): bool**
+## **intersectsLine(Line $line): bool**
 
 Checks whether the line intersects another line.
 
@@ -161,7 +161,7 @@ $line1->intersectsLine($line2); // True
 $line1->intersectsLine($line3); // False
 ```
 
-## **intersectsPolygon(Polygon $aPolygon): bool**
+## **intersectsPolygon(Polygon $polygon): bool**
 
 Checks whether the line intersects a polygon.
 

@@ -10,7 +10,7 @@ GeoPHP was tested on PHP >= 7. Please, let PHP 5 die.
 
 Install the library running:
 
-`composer install jware/geophpP`
+`composer install jware/geophp`
 
 ## Usage
 
