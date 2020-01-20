@@ -283,3 +283,59 @@ $polygon = new Polygon([
 $polygon->containsPoint(new Point(2, 2)); // True
 $polygon->containsPoint(new Point(10, 12)); // False
 ```
+
+## **containsLine(Line $line): bool**
+
+Checks whether the polygon contains a line.
+
+```
+$polygon = new Polygon([
+    new Point(0, 0),
+    new Point(4, 0),
+    new Point(4, 4),
+    new Point(0, 4),
+    new Point(0, 0)
+]);
+$line1 = new Line(
+    new Point(2, 2),
+    new Point(3, 3)
+);
+$line2 = new Line(
+    new Point(-1, -1),
+    new Point(2, 3)
+);
+
+$polygon->containsLine($line1); // True
+$polygon->containsLine($line2); // False
+```
+
+## **containsPolygon(Polygon $polygon): bool**
+
+Checks whether the polygon contains another polygon.
+
+```
+$polygon1 = new Polygon([
+    new Point(0, 0),
+    new Point(4, 0),
+    new Point(4, 4),
+    new Point(0, 4),
+    new Point(0, 0)
+]);
+$polygon2 = new Polygon([
+    new Point(4, 0),
+    new Point(8, 0),
+    new Point(8, 4),
+    new Point(4, 4),
+    new Point(4, 0)
+]);
+
+$polygon3 = new Polygon([
+    new Point(1, 2),
+    new Point(2, 2),
+    new Point(2, 3),
+    new Point(1, 2)
+]);
+
+$polygon1->containsPolygon($polygon3) // True
+$polygon1->containsPolygon($polygon2) // False
+```

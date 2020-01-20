@@ -4,13 +4,13 @@ title: Getting Started
 
 ## Pre-requisites
 
-GeoPHP was tested on PHP >= 7. Please, let PHP 5 die.
+GeoPHP was tested on PHP >= 7. Please, let PHP 5 die!
 
 ## Installation
 
 Install the library running:
 
-`composer install jware/geophp`
+`composer require jware/geophp`
 
 ## Usage
 
