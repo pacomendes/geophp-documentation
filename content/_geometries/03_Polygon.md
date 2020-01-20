@@ -59,6 +59,7 @@ $polygon = new Polygon([
     new Point(0, 4),
     new Point(0, 0),
 ]);
+
 $clone = $polygon->clone();
 ```
 
@@ -73,6 +74,7 @@ $polygon = new Polygon([
     new Point(2, 4),
     new Point(0, 0)
 ]);
+
 $polygon->getPoints(); // [Point(0, 0), Point(4, 0), Point(2, 4), Point(0, 0)]
 
 ```
@@ -88,6 +90,7 @@ $polygon = new Polygon([
     new Point(2, 4),
     new Point(0, 0)
 ]);
+
 $polygon->setPoint(2, new Point(5, 6));
 $polygon->getPoints(); // [Point(0, 0), Point(4, 0), Point(5, 6), Point(0, 0)]
 ```
@@ -105,6 +108,7 @@ $polygon = new Polygon([
     new Point(-77, 39),
     new Point(-81, 41)
 ]);
+
 $centroid = $polygon->getCentroid(); // Point(-82, 36)
 ```
 
@@ -120,6 +124,7 @@ $polygon = new Polygon([
     new Point(0, 4),
     new Point(0, 0),
 ]);
+
 $polygon1->area(); // 16
 ```
 
@@ -208,7 +213,8 @@ Computes the euclidean distance between two points.
 
 ```
 $point = new Point(1, 2);
-$point2 = new Point(4, 5)
+$point2 = new Point(4, 5);
+
 $point->euclideanDistance($point2); // 4.243
 ```
 
@@ -223,8 +229,9 @@ $line = new Line(
 );
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
-$point->intersectsLine($line) // True
-$point2->intersectsLine($line) // False
+
+$point->intersectsLine($line); // True
+$point2->intersectsLine($line); // False
 ```
 
 ## **intersectsPoint(Point $otherPoint): bool**
@@ -235,8 +242,9 @@ Checks whether the point intersects with another point. Two points intersect if 
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
 $point3 = new Point(3, 4);
-$point->intersectsPoint($point2) // False
-$point2->intersectsPoint($point3) // True
+
+$point->intersectsPoint($point2); // False
+$point2->intersectsPoint($point3); // True
 ```
 
 ## **intersectsPolygon(Polygon $polygon): bool**
@@ -254,6 +262,24 @@ $polygon = new Polygon([
 ]);
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
-$point->intersectsPolygon($Polygon) // True
-$point2->intersectsPolygon($Polygon) // False
+
+$point->intersectsPolygon($Polygon); // True
+$point2->intersectsPolygon($Polygon); // False
+```
+
+## **containsPoint(Point $point): bool**
+
+Checks whether a point is inside a polygon.
+
+```
+$polygon = new Polygon([
+    new Point(0, 0),
+    new Point(4, 0),
+    new Point(4, 4),
+    new Point(0, 4),
+    new Point(0, 0)
+]);
+
+$polygon->containsPoint(new Point(2, 2)); // True
+$polygon->containsPoint(new Point(10, 12)); // False
 ```

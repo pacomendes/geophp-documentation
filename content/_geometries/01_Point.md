@@ -24,6 +24,7 @@ Creates a Point's clone.
 ```
 $point = new Point(3, 28);
 $point2 = $point->clone();
+
 $point2->isEqual($point); // True
 ```
 
@@ -100,6 +101,7 @@ Converts x and y components of the Point from radians to degrees. Returns a Poin
 
 ```
 $point = new Point(2, 3);
+
 $pointConverted = $point->fromRadiansToDegrees();
 $pointConverted->getXAndY(); // [114.5916, 171.8873]
 ```
@@ -110,6 +112,7 @@ Converts x and y components of the Point from degrees to radians. Returns a Poin
 
 ```
 $point = new Point(57.29578, 0);
+
 $pointConverted = $point->fromDegreesToRadians();
 $pointConverted->getXAndY(); // [1, 0]
 ```
@@ -121,6 +124,7 @@ Computes the angle between two points. If `$inDegrees` is true the result is ret
 ```
 $point1 = new Point(2, 0);
 $point2 = new Point(2, 2);
+
 $point1->getAngle($point2); // 45
 ```
 
@@ -131,6 +135,7 @@ Computes the dot product of the two points: dot = x1 * x2 + y1 * y2.
 ```
 $point1 = new Point(2, 4.5);
 $point2 = new Point(1.5, 0.5);
+
 $point1->dotProduct($point2); // 5.25s
 ```
 
@@ -142,6 +147,7 @@ Computes the cross product of the three points. A positive value implies $this â
 $pointA = new Point(1, 2);
 $pointB = new Point(3, 5);
 $pointC = new Point(7, 12);
+
 $pointA->crossProduct($pointB, $pointC); // 2
 ```
 
@@ -151,7 +157,8 @@ Computes the euclidean distance between two points.
 
 ```
 $point = new Point(1, 2);
-$point2 = new Point(4, 5)
+$point2 = new Point(4, 5);
+
 $point->euclideanDistance($point2); // 4.243
 ```
 
@@ -166,8 +173,9 @@ $line = new Line(
 );
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
-$point->intersectsLine($line) // True
-$point2->intersectsLine($line) // False
+
+$point->intersectsLine($line); // True
+$point2->intersectsLine($line); // False
 ```
 
 ## **intersectsPoint(Point $otherPoint): bool**
@@ -178,8 +186,9 @@ Checks whether the point intersects with another point. Two points intersect if 
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
 $point3 = new Point(3, 4);
-$point->intersectsPoint($point2) // False
-$point2->intersectsPoint($point3) // True
+
+$point->intersectsPoint($point2); // False
+$point2->intersectsPoint($point3); // True
 ```
 
 ## **intersectsPolygon(Polygon $polygon): bool**
@@ -197,6 +206,7 @@ $polygon = new Polygon([
 ]);
 $point = new Point(3, 3);
 $point2 = new Point(3, 4);
-$point->intersectsPolygon($Polygon) // True
-$point2->intersectsPolygon($Polygon) // False
+
+$point->intersectsPolygon($Polygon); // True
+$point2->intersectsPolygon($Polygon); // False
 ```
