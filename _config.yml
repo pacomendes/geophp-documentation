@@ -10,9 +10,10 @@
 #    - authors-url: base url for article authors
 # NOTE: If you have a baseurl be sure to append it to any static content path e.g.: ${baseurl}/media/images/logo.png
 # name: GeoPHP
-#baseurl: /mysite
+baseurl: /geophp-documentation
 footer: Made with love ❤
-logo: /media/images/logo.jpg
+logo: ${baseurl}/media/images/logo.jpg
+images: ${baseurl}/media/images
 show:
   status: true
   author: true
