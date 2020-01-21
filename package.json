@@ -19,7 +19,7 @@
     "build": "presidium build",
     "start": "presidium start",
     "validate": "presidium validate",
-    "gh-pages": "presidium gh-pages"
+    "gh-pages": "rm -fr docs/;mkdir docs;npm run clean;npm run build;cp -r dist/site/ docs/"
   },
   "devDependencies": {
     "presidium-core": "^0.1.46"
