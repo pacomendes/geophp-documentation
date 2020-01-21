@@ -6536,6 +6536,8 @@ button.close {
   #presidium-container #presidium-content section .article-header .article-role {
     float: right; }
     #presidium-container #presidium-content section .article-header .article-role .label {
+      color: black;
+      font-size: 12px;
       background-color: #999999; }
 #presidium-container #presidium-content section .article .article-edit-menu {
   display: flex;
